@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* enlazo los archivos de utilidades */
+/* variables para los 3 colores del proyecto */
 /* formulario para contactar con sombras */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 .formularioContacto {
@@ -80,6 +81,7 @@
   align-items: center;
   /* Acá va el título de cada categoría, ejemplo "Nuestra Iluminación" */
   /* Esta parte modifica el subtítulo de cada categoría */
+  /* aquí va el recuadro de cada producto con flex para centrar y una altura automatica para que crezca según el contenido de cada producto*/
 }
 .mainProductos .tituloCategoria {
   text-align: center;
@@ -112,7 +114,8 @@
   margin: 1rem;
   height: auto;
   width: 21.5rem;
-  border: 3px solid #949494;
+  border: 2px solid #949494;
+  /* hago una class grid en un nuevo div que será útil en los MQ de tablet y desktop */
 }
 .mainProductos .recuadroProducto .tituloProducto {
   height: auto;
@@ -125,6 +128,9 @@
   color: #ffffff;
   text-align: center;
 }
+.mainProductos .recuadroProducto .grid {
+  /* la aplico flex a las imagenes para que se centren en el recuadro cuando sobrepasen el div */
+}
 .mainProductos .recuadroProducto .grid .imagenProducto {
   display: flex;
   justify-content: center;
@@ -135,6 +141,7 @@
   overflow: hidden;
   object-fit: cover;
   box-shadow: 3px 7px 17px #000;
+  /* le doy la misma altura del div a la imagen */
 }
 .mainProductos .recuadroProducto .grid .imagenProducto img {
   height: 15rem;
@@ -149,6 +156,7 @@
   font-size: 1rem;
   color: #373333;
   list-style: none;
+  /* quitamos los puntitos del listado */
 }
 .mainProductos .recuadroProducto .grid .descripcionProducto ul {
   list-style: none;
@@ -194,9 +202,11 @@
   margin-bottom: 5px;
 }
 
+/* acá el MQ para tablet*/
 @media screen and (min-width: 768px) {
   .mainProductos .recuadroProducto {
     width: 40rem;
+    /* le aplico un grid para crear dos columnas, la descrpcion queda en la primera y la imagen con el precio en la segudna columna */
   }
   .mainProductos .recuadroProducto .grid {
     display: grid;
@@ -214,25 +224,17 @@
     grid-column: 2/3;
   }
 }
+/* MQ para desktop */
 @media screen and (min-width: 1024px) {
+  .mainProductos {
+    /* le doy mas ancho al recuadro de cada producto */
+  }
   .mainProductos .recuadroProducto {
     width: 50rem;
     padding: 1rem;
   }
-  .mainProductos .recuadroProducto .grid {
-    display: grid;
-    grid-template-columns: 55% 45%;
-  }
   .mainProductos .recuadroProducto .grid .imagenProducto {
-    grid-column: 2/3;
     border-radius: 0.7rem;
-  }
-  .mainProductos .recuadroProducto .grid .descripcionProducto {
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
-  .mainProductos .recuadroProducto .grid .precioProducto {
-    grid-column: 2/3;
   }
 }
 /* importo fuente desde google */
@@ -470,6 +472,7 @@ body .whatsapp {
   bottom: 2rem;
 }
 
+/*formatos del footer*/
 footer {
   background-color: #E51B23;
   display: flex;
@@ -504,13 +507,25 @@ footer div .correo {
   text-decoration: none;
 }
 
+/*acá vamos con el media query de tablet*/
 @media screen and (min-width: 768px) {
+  body {
+    /* aqui va el footer, ahora con mas espacio aparece el logo de llamar*/
+  }
+  body main {
+    /* aumento la altura del slide y cambiamos posicion de la segunda foto*/
+    /*modifico la fuente por una mas grande*/
+    /* aquí agrego grids para crear dos columnas, así va la imagen en una y la descrpcion justo al lado*/
+  }
   body main .slide {
     height: 23rem;
   }
   body main .slide .encuadreCelebracion15 {
     position: relative;
     bottom: 15rem;
+  }
+  body main .promoProductos {
+    /* le damos flex a las cards de bootstrap para que queden una al lado de la otra en dos filas*/
   }
   body main .promoProductos h1 {
     text-align: center;
@@ -532,6 +547,9 @@ footer div .correo {
   body main .promoProductos .promoProductosCards .card {
     width: 21rem;
   }
+  body main .seccionPromoKits {
+    /*repito lo mismo pero invierto las posiciones, descripcion a la primera columna e imagen a la segunda columna*/
+  }
   body main .seccionPromoKits .primerKit {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -539,6 +557,10 @@ footer div .correo {
     height: 20rem;
     margin-top: 2rem;
     margin-bottom: -2rem;
+    /* el titulo y la descripcion pasan a la segunda columna*/
+    /*la imagen pasa a la primera columna*/
+    /*la descrpipcion ocupa la segunda fila de la segunda columna*/
+    /* el boton queda en la ultima fila de la segunda columna*/
   }
   body main .seccionPromoKits .primerKit .tituloKit {
     grid-column: 2/3;
@@ -628,7 +650,16 @@ footer div .correo {
     text-decoration: none;
   }
 }
+/* media query para desktop*/
 @media screen and (min-width: 1024px) {
+  body {
+    /* modifico algunas posiciones del footer para que quede mejor centrado en pantalla escritorio*/
+  }
+  body .mainIndex {
+    /* aumento otro poco la altura del slide y cambio posicion de segunda foto*/
+    /* acá le doy flex a las cards de bootstrap y modifico el ancho para que quepan las 4 cards en una misma fila*/
+    /* el dolor de cabeza, aparecen dos imagenes extras que se superponen a las anteriores en una de las esquinas*/
+  }
   body .mainIndex .slide {
     height: 28rem;
   }
@@ -647,6 +678,10 @@ footer div .correo {
   body .mainIndex .promoProductos .promoProductosCards .card img {
     height: 18rem;
   }
+  body .mainIndex .seccionPromoKits .primerKit .imagenKit {
+    /*le doy posicion relativa para superponerla
+    y le doy un z index de 1 para que quede por encima*/
+  }
   body .mainIndex .seccionPromoKits .primerKit .imagenKit .superpuesta1 {
     height: 12rem;
     margin-top: 7rem;
@@ -660,6 +695,9 @@ footer div .correo {
     bottom: 5rem;
     border-radius: 2rem;
   }
+  body .mainIndex .seccionPromoKits .segundoKit .imagenKit {
+    /* z index de menos uno para que quede abajo de la otra imagen*/
+  }
   body .mainIndex .seccionPromoKits .segundoKit .imagenKit .superpuesta3 {
     position: relative;
     right: -12rem;
@@ -668,7 +706,6 @@ footer div .correo {
     z-index: -1;
   }
   body .mainIndex .seccionPromoKits .segundoKit .imagenKit .superpuesta4 {
-    background-color: aquamarine;
     display: inline;
     z-index: 1;
     height: 10rem;

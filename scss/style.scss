@@ -183,6 +183,7 @@ body {
         }
     }
 
+    /*formatos del footer*/
     footer {
         background-color: $colorPrincipal;
         display: flex;
@@ -212,11 +213,13 @@ body {
             }
         }
     }
-  
+
+/*acá vamos con el media query de tablet*/
 @media screen and (min-width: 768px) {
 
     body {
         main {
+            /* aumento la altura del slide y cambiamos posicion de la segunda foto*/
             .slide {
                 height: 23rem;
                 .encuadreCelebracion15 {
@@ -224,10 +227,12 @@ body {
                     bottom: 15rem;
                 }
                 }
+            /*modifico la fuente por una mas grande*/
             .promoProductos {
                 h1 {
                     @include textoTituloTablet;
                 }
+            /* le damos flex a las cards de bootstrap para que queden una al lado de la otra en dos filas*/
             .promoProductosCards {
                 flex-direction: row;
                 flex-wrap: wrap;
@@ -238,6 +243,7 @@ body {
                 }
             }
 
+            /* aquí agrego grids para crear dos columnas, así va la imagen en una y la descrpcion justo al lado*/
             .seccionPromoKits {
                 .primerKit {
                     display: grid;
@@ -246,10 +252,12 @@ body {
                     height: 20rem;
                     margin-top: 2rem;
                     margin-bottom: -2rem;
+                    /* el titulo y la descripcion pasan a la segunda columna*/
                     .tituloKit {
                         grid-column: 2/3;
                         grid-row:1/2;
                     }
+                    /*la imagen pasa a la primera columna*/
                     .imagenKit {
                         grid-column: 1/2;
                         grid-row:1/4;
@@ -260,10 +268,12 @@ body {
                             overflow: hidden;
                         }
                     }
+                    /*la descrpipcion ocupa la segunda fila de la segunda columna*/
                     .descripcionKit {
                         grid-column: 2/3;
                         grid-row: 2/3;
                     }
+                    /* el boton queda en la ultima fila de la segunda columna*/
                     .botonKit {
                         grid-column: 2/3;
                         grid-row: 3/4;
@@ -272,6 +282,7 @@ body {
                         align-items: center;
                     }
                 }
+                /*repito lo mismo pero invierto las posiciones, descripcion a la primera columna e imagen a la segunda columna*/
                 .segundoKit {
                     margin-top: 3rem;
                     display: grid;
@@ -307,6 +318,7 @@ body {
             }
         }
 
+        /* aqui va el footer, ahora con mas espacio aparece el logo de llamar*/
         footer {
             div {
                 .logoFooter {
@@ -337,10 +349,12 @@ body {
     }
 }
 
+/* media query para desktop*/
 @media screen and (min-width: 1024px) {
 
     body {
         .mainIndex {
+            /* aumento otro poco la altura del slide y cambio posicion de segunda foto*/
             .slide {
                 height: 28rem;
                 .encuadreCelebracion15 {
@@ -348,6 +362,7 @@ body {
                     bottom: 25rem;
                 }
                 }
+            /* acá le doy flex a las cards de bootstrap y modifico el ancho para que quepan las 4 cards en una misma fila*/
             .promoProductos {
                 .promoProductosCards {
                     flex-direction: row;
@@ -361,6 +376,7 @@ body {
                     }
                 }
             }
+            /* el dolor de cabeza, aparecen dos imagenes extras que se superponen a las anteriores en una de las esquinas*/
             .seccionPromoKits {
                 .primerKit {
                     .imagenKit {
@@ -368,6 +384,8 @@ body {
                             height: 12rem;
                             margin-top: 7rem;
                         }
+                        /*le doy posicion relativa para superponerla
+                        y le doy un z index de 1 para que quede por encima*/
                         .superpuesta2 {
                             display: inline;
                             z-index: 1;
@@ -381,6 +399,7 @@ body {
                 }
                 .segundoKit {
                     .imagenKit {
+                        /* z index de menos uno para que quede abajo de la otra imagen*/
                         .superpuesta3 {
                             position: relative;
                             right: -12rem;
@@ -389,7 +408,6 @@ body {
                             z-index: -1;
                         }
                         .superpuesta4 {
-                            background-color: aquamarine;
                             display: inline;
                             z-index: 1;
                             height: 10rem;
@@ -402,8 +420,8 @@ body {
                 }
             }
         }
-
-
+    
+        /* modifico algunas posiciones del footer para que quede mejor centrado en pantalla escritorio*/
         footer {
             div {
                 .logoFooter {

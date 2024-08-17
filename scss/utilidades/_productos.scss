@@ -30,13 +30,14 @@
             font-weight: 800;
         }
     }
+    /* aquí va el recuadro de cada producto con flex para centrar y una altura automatica para que crezca según el contenido de cada producto*/
     .recuadroProducto {
         display: flex;
         flex-direction: column;
         margin: 1rem;
         height: auto;
         width: 21.5rem;
-        border: 3px solid #949494 ;
+        border: 2px solid #949494 ;
         .tituloProducto {
             height: auto;
             margin: 0.7rem;
@@ -48,7 +49,9 @@
             color: #ffffff;
             text-align: center;
         }
+        /* hago una class grid en un nuevo div que será útil en los MQ de tablet y desktop */
         .grid{
+            /* la aplico flex a las imagenes para que se centren en el recuadro cuando sobrepasen el div */
             .imagenProducto {
                 display:flex;
                 justify-content: center;
@@ -59,6 +62,7 @@
                 overflow: hidden;
                 object-fit: cover;
                 box-shadow: 3px 7px 17px #000;
+                /* le doy la misma altura del div a la imagen */
                 img {
                     height: 15rem;
                 }
@@ -73,6 +77,7 @@
                 font-size: 1rem;
                 color: #373333;
                 list-style: none;
+                /* quitamos los puntitos del listado */
                 ul {
                     list-style: none;
                 }
@@ -125,10 +130,12 @@
     }
 }
 
+/* acá el MQ para tablet*/
 @media screen and (min-width: 768px) {
     .mainProductos {
         .recuadroProducto {
             width: 40rem;
+            /* le aplico un grid para crear dos columnas, la descrpcion queda en la primera y la imagen con el precio en la segudna columna */
             .grid {
                 display: grid;
                 grid-template-columns: 55% 45%;
@@ -148,24 +155,16 @@
     }
 }
 
+/* MQ para desktop */
 @media screen and (min-width: 1024px) {
     .mainProductos {
+        /* le doy mas ancho al recuadro de cada producto */
         .recuadroProducto {
             width: 50rem;
             padding: 1rem;
             .grid {
-                display: grid;
-                grid-template-columns: 55% 45%;
                 .imagenProducto {
-                    grid-column: 2/3;
                     border-radius: 0.7rem;
-                }
-                .descripcionProducto {
-                    grid-column: 1/2;
-                    grid-row: 1/2;
-                }
-                .precioProducto {
-                    grid-column: 2/3;
                 }
             }
         }
