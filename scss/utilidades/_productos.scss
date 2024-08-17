@@ -50,12 +50,18 @@
         }
         .grid{
             .imagenProducto {
+                display:flex;
+                justify-content: center;
+                align-items: center;
                 margin: 0.7rem;
                 height: 15rem;
                 background-color: #bd9899;
                 overflow: hidden;
                 object-fit: cover;
                 box-shadow: 3px 7px 17px #000;
+                img {
+                    height: 15rem;
+                }
             }
             .descripcionProducto {
                 height: auto;

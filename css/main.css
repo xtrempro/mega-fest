@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* enlazo el archivo de utilidades */
+/* enlazo los archivos de utilidades */
 /* formulario para contactar con sombras */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 .formularioContacto {
@@ -126,12 +126,18 @@
   text-align: center;
 }
 .mainProductos .recuadroProducto .grid .imagenProducto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0.7rem;
   height: 15rem;
   background-color: #bd9899;
   overflow: hidden;
   object-fit: cover;
   box-shadow: 3px 7px 17px #000;
+}
+.mainProductos .recuadroProducto .grid .imagenProducto img {
+  height: 15rem;
 }
 .mainProductos .recuadroProducto .grid .descripcionProducto {
   height: auto;
@@ -242,25 +248,33 @@
   box-sizing: border-box;
 }
 
+/* comienzo la anidación en scss */
 body {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  /* recuadro que lleva el texto "Arriendos desde $XXXXX" */
+  /* dejo el menú siempre pegado al top del navegador */
+  /* recuadro que va dividiendo algunas categorias */
+  /* en la parte central del index va una imagen mas una descripcion de un evento en el cual son utiles nuestros productos */
+  /* aquí le doy formato a una tabla de despachos*/
   /* ícono de whatsapp fijado en la esquina inferior derecha */
 }
 body header {
   position: sticky;
   z-index: 1000;
   top: 0;
+  /* le doy una altura al logo */
 }
 body header .logo {
   height: 40px;
 }
 body .mainIndex {
+  /* le doy flex para que todos los elementos queden centrados y le digo que vaya en columnas */
+  /* añado el flex desde el mixin de utilidades */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  /* le doy una altura al slide que saqué de bootstrap */
+  /* le doy overflow hidden para que las imágenes no desborden */
+  /* voy moviendo la segunda imagen para centrarla en el punto que yo quiero */
 }
 body .mainIndex .slide {
   height: 10rem;
@@ -269,6 +283,10 @@ body .mainIndex .slide {
 body .mainIndex .encuadreCelebracion15 {
   position: relative;
   bottom: 7rem;
+}
+body .promoProductos {
+  /* le doy formato al h1 sacando las propiedades desde el mixin */
+  /* le doy flex a las cards que saqué de bootstrap, con el flex las alineo al centro y le doy un margen con gap */
 }
 body .promoProductos h1 {
   text-align: center;
@@ -297,6 +315,7 @@ body .promoProductos .promoProductosCards .card {
   font-style: normal;
   font-size: 1rem;
   color: #373333;
+  /* le doy flex y space para centrar el boton de las cards */
 }
 body .promoProductos .promoProductosCards .card img {
   object-fit: cover;
@@ -310,9 +329,12 @@ body .banner {
   width: 100%;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
+  /* le doy el color sacando valor desde variables de utilidades */
   background-color: #E51B23;
   padding-top: 0.4rem;
   padding-bottom: 0.2rem;
+  /* formato del texto que va dentro del recuadro, lo saco desde mixin*/
+  /* algunos banner tienen un segundo texto mas pequeño */
 }
 body .banner .primerTextoBanner {
   font-family: "Roboto", sans-serif;
@@ -329,13 +351,16 @@ body .banner .segundoTextoBanner {
   font-style: normal;
   font-size: 1rem;
   color: #373333;
+  /* le doy el color con variables */
   color: whitesmoke;
 }
 body .seccionPromoKits .detalleKits {
+  /* añadimos flex con mixin para alinear al centro */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  /* para celulares y tablet solo se muestra una imagen para cada tipo de evento */
 }
 body .seccionPromoKits .detalleKits .tituloKit {
   text-align: center;
@@ -351,11 +376,14 @@ body .seccionPromoKits .detalleKits .tituloKit {
   text-transform: uppercase;
   margin-top: 1rem;
 }
+body .seccionPromoKits .detalleKits .imagenKit {
+  /* no se muestra en celulares ni tablets */
+  /* no se muestra en celulares ni tablets */
+}
 body .seccionPromoKits .detalleKits .imagenKit .superpuesta1 {
   height: 12rem;
   width: 21.5rem;
   overflow: hidden;
-  z-index: -1;
 }
 body .seccionPromoKits .detalleKits .imagenKit .superpuesta2 {
   display: none;
@@ -364,7 +392,6 @@ body .seccionPromoKits .detalleKits .imagenKit .superpuesta3 {
   height: 12rem;
   width: 21.5rem;
   overflow: hidden;
-  z-index: 1;
 }
 body .seccionPromoKits .detalleKits .imagenKit .superpuesta4 {
   display: none;

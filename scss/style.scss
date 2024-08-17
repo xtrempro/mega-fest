@@ -1,4 +1,4 @@
-/* enlazo el archivo de utilidades */
+/* enlazo los archivos de utilidades */
 @import "utilidades/mixin";
 @import "utilidades/variables";
 @import "utilidades/formulario";
@@ -20,32 +20,40 @@
     box-sizing: border-box;
 }
 
+/* comienzo la anidación en scss */
 body {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    /* dejo el menú siempre pegado al top del navegador */
     header {
         position: sticky; z-index: 1000;
         top: 0;
+        /* le doy una altura al logo */
         .logo {
             height: 40px;
         }
     }
     .mainIndex {
+        /* le doy flex para que todos los elementos queden centrados y le digo que vaya en columnas */
+        /* añado el flex desde el mixin de utilidades */
         @include flex;
         flex-direction: column;
+        /* le doy una altura al slide que saqué de bootstrap */
+        /* le doy overflow hidden para que las imágenes no desborden */
         .slide {
             height: 10rem;
             overflow: hidden;
             }
+            /* voy moviendo la segunda imagen para centrarla en el punto que yo quiero */
             .encuadreCelebracion15 {
                 position: relative;
                 bottom: 7rem;
             }
         }
         .promoProductos {
+            /* le doy formato al h1 sacando las propiedades desde el mixin */
             h1 {
                 @include textoTitulo;
             }
+            /* le doy flex a las cards que saqué de bootstrap, con el flex las alineo al centro y le doy un margen con gap */
             .promoProductosCards {
                 display: flex;
                 flex-direction: column;
@@ -59,6 +67,7 @@ body {
                             object-fit: cover;
                             overflow: hidden;
                         }
+                        /* le doy flex y space para centrar el boton de las cards */
                         a {
                             display: flex;
                             justify-content: space-around;
@@ -68,38 +77,44 @@ body {
             }
         }
 
-        /* recuadro que lleva el texto "Arriendos desde $XXXXX" */
+        /* recuadro que va dividiendo algunas categorias */
         .banner {
             width: 100%;
             margin-top: 1rem;
             margin-bottom: 0.5rem;
+            /* le doy el color sacando valor desde variables de utilidades */
             background-color: $colorPrincipal;
             padding-top: 0.4rem;
             padding-bottom: 0.2rem;
+            /* formato del texto que va dentro del recuadro, lo saco desde mixin*/
             .primerTextoBanner {
                 @include textoBanner;
             }
+            /* algunos banner tienen un segundo texto mas pequeño */
             .segundoTextoBanner {
                 @include textoSecundario;
+                /* le doy el color con variables */
                 color: $colorTerciario;
             }
             }
-        
+        /* en la parte central del index va una imagen mas una descripcion de un evento en el cual son utiles nuestros productos */
         .seccionPromoKits {
             .detalleKits {
+                /* añadimos flex con mixin para alinear al centro */
                 @include flex;
                 flex-direction: column;
                 .tituloKit {
                     @include textSecundario;
                     margin-top: 1rem;
                 }
+                /* para celulares y tablet solo se muestra una imagen para cada tipo de evento */
                 .imagenKit {
                     .superpuesta1 {
                         height: 12rem;
                         width: 21.5rem;
                         overflow: hidden;
-                        z-index: -1;
                     }
+                    /* no se muestra en celulares ni tablets */
                     .superpuesta2{
                         display: none;
                     }
@@ -107,8 +122,8 @@ body {
                         height: 12rem;
                         width: 21.5rem;
                         overflow: hidden;
-                        z-index: 1;
                     }
+                    /* no se muestra en celulares ni tablets */
                     .superpuesta4{
                         display: none;
                     }
@@ -119,6 +134,7 @@ body {
                 }
             }
         }
+        /* aquí le doy formato a una tabla de despachos*/
         .tablaDespacho {
             display: flex;
             flex-direction: column;
