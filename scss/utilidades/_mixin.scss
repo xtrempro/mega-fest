@@ -1,0 +1,96 @@
+@mixin textoTitulo {
+    text-align: center;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.2rem;
+    color: #373333;
+}
+
+@mixin textSecundario {
+    text-align: center;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 0.1rem;
+    color: #373333;
+    text-transform: uppercase;
+}
+
+@mixin textoTituloTablet {
+    text-align: center;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2rem;
+    color: #373333;
+}
+
+@mixin textoSecundario {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    color: #373333;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin textFooter {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.8rem;
+    color: whitesmoke;
+}
+
+@mixin textFooterTablet {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.1rem;
+    color: whitesmoke;
+}
+
+@mixin textoBanner {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.3rem;
+    color: whitesmoke;
+    text-align: center;
+}
+
+@mixin textoTitulosTabla {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 1rem;
+    color: #373333;
+    text-align: left;
+}
+
+@mixin textoTabla {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    color: #373333;
+}

@@ -1,0 +1,167 @@
+/* Estilos de productos */
+.mainProductos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Acá va el título de cada categoría, ejemplo "Nuestra Iluminación" */
+    .tituloCategoria{
+        text-align: center;
+        padding: 5px;
+        margin-left: 0.7rem;
+        margin-right: 0.7rem;
+        font-family: "Roboto", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        font-size: 2rem;
+        color: #373333;
+    }
+    /* Esta parte modifica el subtítulo de cada categoría */
+    .descripcionCategoria {
+        text-align: center;
+        margin-left: 0.7rem;
+        margin-right: 0.7rem;
+        margin-bottom: 0px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 1rem;
+        color: #373333;
+        span{
+            font-weight: 800;
+        }
+    }
+    .recuadroProducto {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+        height: auto;
+        width: 21.5rem;
+        border: 3px solid #949494 ;
+        .tituloProducto {
+            height: auto;
+            margin: 0.7rem;
+            background-color: #E51B23;
+            font-family: "Roboto", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 1.5rem;
+            color: #ffffff;
+            text-align: center;
+        }
+        .grid{
+            .imagenProducto {
+                margin: 0.7rem;
+                height: 15rem;
+                background-color: #bd9899;
+                overflow: hidden;
+                object-fit: cover;
+                box-shadow: 3px 7px 17px #000;
+            }
+            .descripcionProducto {
+                height: auto;
+                margin: 0.7rem;
+                margin-bottom: 0;
+                font-family: "Roboto", sans-serif;
+                font-weight: 500;
+                font-style: normal;
+                font-size: 1rem;
+                color: #373333;
+                list-style: none;
+                ul {
+                    list-style: none;
+                }
+            }
+            .precioProducto {
+                height: 90px;
+                margin: 0.7rem;
+                margin-bottom: 0;
+                font-family: "Roboto", sans-serif;
+                font-weight: 500;
+                font-style: normal;
+                font-size: 1rem;
+                color: #373333;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                span {
+                    font-weight: 900;
+                }
+                .botonProducto {
+                    .boton1 {
+                        background-color: $colorSecundario;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+
+.boxPreguntas {
+    margin: 0.7rem;
+    /* estilo de las preguntas que van en negrita */
+    .preguntas {
+        font-family: "Roboto", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        font-size: 1rem;
+        color: #373333;
+    }
+    /* respuesta que van sin negrita */
+    .respuestas {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 0.8rem;
+        color: #373333;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .mainProductos {
+        .recuadroProducto {
+            width: 40rem;
+            .grid {
+                display: grid;
+                grid-template-columns: 55% 45%;
+                .imagenProducto {
+                    grid-column: 2/3;
+                    border-radius: 0.5rem;
+                }
+                .descripcionProducto {
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                }
+                .precioProducto {
+                    grid-column: 2/3;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .mainProductos {
+        .recuadroProducto {
+            width: 50rem;
+            padding: 1rem;
+            .grid {
+                display: grid;
+                grid-template-columns: 55% 45%;
+                .imagenProducto {
+                    grid-column: 2/3;
+                    border-radius: 0.7rem;
+                }
+                .descripcionProducto {
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                }
+                .precioProducto {
+                    grid-column: 2/3;
+                }
+            }
+        }
+    }
+}

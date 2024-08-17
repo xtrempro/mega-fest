@@ -1,0 +1,684 @@
+@charset "UTF-8";
+/* enlazo el archivo de utilidades */
+/* formulario para contactar con sombras */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+.formularioContacto {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 21.5rem;
+  height: 100%;
+  flex-direction: column;
+  background-color: #E51B23;
+  padding: 4px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+  color: white;
+  box-shadow: 7px 13px 37px #000;
+  margin-bottom: 40px;
+  /* el cuadro para el celular */
+  /* el cuadro para escribir las dudas */
+}
+.formularioContacto .textboxnombre {
+  width: 90%;
+  background-color: whitesmoke;
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid #373333;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+  color: #373333;
+}
+.formularioContacto .textboxcelular {
+  margin-top: 15px;
+  width: 90%;
+  background-color: whitesmoke;
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid #373333;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+  color: #373333;
+}
+.formularioContacto .textboxdudas {
+  margin-top: 15px;
+  width: 90%;
+  background-color: whitesmoke;
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid #373333;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+  color: #373333;
+}
+.formularioContacto .botondudas {
+  width: 90%;
+  background-color: #373333;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 17px;
+}
+
+/* el cuadro para el nombre */
+/* Estilos de productos */
+.mainProductos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Acá va el título de cada categoría, ejemplo "Nuestra Iluminación" */
+  /* Esta parte modifica el subtítulo de cada categoría */
+}
+.mainProductos .tituloCategoria {
+  text-align: center;
+  padding: 5px;
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 2rem;
+  color: #373333;
+}
+.mainProductos .descripcionCategoria {
+  text-align: center;
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+  margin-bottom: 0px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+  color: #373333;
+}
+.mainProductos .descripcionCategoria span {
+  font-weight: 800;
+}
+.mainProductos .recuadroProducto {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  height: auto;
+  width: 21.5rem;
+  border: 3px solid #949494;
+}
+.mainProductos .recuadroProducto .tituloProducto {
+  height: auto;
+  margin: 0.7rem;
+  background-color: #E51B23;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-align: center;
+}
+.mainProductos .recuadroProducto .grid .imagenProducto {
+  margin: 0.7rem;
+  height: 15rem;
+  background-color: #bd9899;
+  overflow: hidden;
+  object-fit: cover;
+  box-shadow: 3px 7px 17px #000;
+}
+.mainProductos .recuadroProducto .grid .descripcionProducto {
+  height: auto;
+  margin: 0.7rem;
+  margin-bottom: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+  color: #373333;
+  list-style: none;
+}
+.mainProductos .recuadroProducto .grid .descripcionProducto ul {
+  list-style: none;
+}
+.mainProductos .recuadroProducto .grid .precioProducto {
+  height: 90px;
+  margin: 0.7rem;
+  margin-bottom: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+  color: #373333;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.mainProductos .recuadroProducto .grid .precioProducto span {
+  font-weight: 900;
+}
+.mainProductos .recuadroProducto .grid .precioProducto .botonProducto .boton1 {
+  background-color: #373333;
+}
+
+.boxPreguntas {
+  margin: 0.7rem;
+  /* estilo de las preguntas que van en negrita */
+  /* respuesta que van sin negrita */
+}
+.boxPreguntas .preguntas {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1rem;
+  color: #373333;
+}
+.boxPreguntas .respuestas {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.8rem;
+  color: #373333;
+  margin-bottom: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .mainProductos .recuadroProducto {
+    width: 40rem;
+  }
+  .mainProductos .recuadroProducto .grid {
+    display: grid;
+    grid-template-columns: 55% 45%;
+  }
+  .mainProductos .recuadroProducto .grid .imagenProducto {
+    grid-column: 2/3;
+    border-radius: 0.5rem;
+  }
+  .mainProductos .recuadroProducto .grid .descripcionProducto {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .mainProductos .recuadroProducto .grid .precioProducto {
+    grid-column: 2/3;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .mainProductos .recuadroProducto {
+    width: 50rem;
+    padding: 1rem;
+  }
+  .mainProductos .recuadroProducto .grid {
+    display: grid;
+    grid-template-columns: 55% 45%;
+  }
+  .mainProductos .recuadroProducto .grid .imagenProducto {
+    grid-column: 2/3;
+    border-radius: 0.7rem;
+  }
+  .mainProductos .recuadroProducto .grid .descripcionProducto {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .mainProductos .recuadroProducto .grid .precioProducto {
+    grid-column: 2/3;
+  }
+}
+/* importo fuente desde google */
+/* acá importo una fuente desde assets */
+@font-face {
+  font-family: "Citrus Gothic";
+  src: url(../assets/fuentes/fonnts.com-Citrus_Gothic_Inline_Regular.otf);
+}
+/* el reseteo inicial de la página */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  /* recuadro que lleva el texto "Arriendos desde $XXXXX" */
+  /* ícono de whatsapp fijado en la esquina inferior derecha */
+}
+body header {
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+}
+body header .logo {
+  height: 40px;
+}
+body .mainIndex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .mainIndex .slide {
+  height: 10rem;
+  overflow: hidden;
+}
+body .mainIndex .encuadreCelebracion15 {
+  position: relative;
+  bottom: 7rem;
+}
+body .promoProductos h1 {
+  text-align: center;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.2rem;
+  color: #373333;
+}
+body .promoProductos .promoProductosCards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+body .promoProductos .promoProductosCards .card {
+  height: 18rem;
+  width: 21.5rem;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  color: #373333;
+}
+body .promoProductos .promoProductosCards .card img {
+  object-fit: cover;
+  overflow: hidden;
+}
+body .promoProductos .promoProductosCards .card a {
+  display: flex;
+  justify-content: space-around;
+}
+body .banner {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  background-color: #E51B23;
+  padding-top: 0.4rem;
+  padding-bottom: 0.2rem;
+}
+body .banner .primerTextoBanner {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.3rem;
+  color: whitesmoke;
+  text-align: center;
+}
+body .banner .segundoTextoBanner {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  color: #373333;
+  color: whitesmoke;
+}
+body .seccionPromoKits .detalleKits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .seccionPromoKits .detalleKits .tituloKit {
+  text-align: center;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 0.1rem;
+  color: #373333;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+body .seccionPromoKits .detalleKits .imagenKit .superpuesta1 {
+  height: 12rem;
+  width: 21.5rem;
+  overflow: hidden;
+  z-index: -1;
+}
+body .seccionPromoKits .detalleKits .imagenKit .superpuesta2 {
+  display: none;
+}
+body .seccionPromoKits .detalleKits .imagenKit .superpuesta3 {
+  height: 12rem;
+  width: 21.5rem;
+  overflow: hidden;
+  z-index: 1;
+}
+body .seccionPromoKits .detalleKits .imagenKit .superpuesta4 {
+  display: none;
+}
+body .seccionPromoKits .detalleKits .descripcionKit {
+  margin-top: 0.7rem;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  color: #373333;
+}
+body .tablaDespacho {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  /* busco desde la clase el parrafo para dar formato al texto para san antonio la entrega y retiro es gratis*/
+}
+body .tablaDespacho .tablaValores {
+  padding: 4px;
+  border: 3px solid #373333;
+  border-collapse: collapse;
+  width: 300px;
+}
+body .tablaDespacho .tablaValores tr {
+  padding: 5px;
+  border: 3px solid #373333;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1rem;
+  color: #373333;
+  text-align: left;
+  /* títulos de la tabla de costos de envío */
+}
+body .tablaDespacho .tablaValores tr th {
+  padding: 5px;
+  border: 3px solid #373333;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1rem;
+  color: #373333;
+  text-align: left;
+}
+body .tablaDespacho .tablaValores tr td {
+  padding: 5px;
+  border: 3px solid #373333;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  color: #373333;
+}
+body .tablaDespacho p {
+  margin-top: 20px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  color: #373333;
+  /* busco el span del parrafo para poner bold */
+}
+body .tablaDespacho p span {
+  font-weight: 900;
+  color: #E51B23;
+}
+body .whatsapp {
+  width: 3rem;
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+}
+
+footer {
+  background-color: #E51B23;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-top: 1rem;
+}
+footer div {
+  margin: 0.5rem;
+}
+footer div .logoFooter {
+  margin-left: 2rem;
+  margin-right: 1rem;
+  height: 2.5rem;
+  border-radius: 0.2rem;
+}
+footer div .logoLlamar {
+  display: none;
+}
+footer div .logoCorreo {
+  height: 2rem;
+}
+footer div .telefono {
+  display: none;
+}
+footer div .correo {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.8rem;
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  body main .slide {
+    height: 23rem;
+  }
+  body main .slide .encuadreCelebracion15 {
+    position: relative;
+    bottom: 15rem;
+  }
+  body main .promoProductos h1 {
+    text-align: center;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2rem;
+    color: #373333;
+  }
+  body main .promoProductos .promoProductosCards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  body main .promoProductos .promoProductosCards .card {
+    width: 21rem;
+  }
+  body main .seccionPromoKits .primerKit {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    height: 20rem;
+    margin-top: 2rem;
+    margin-bottom: -2rem;
+  }
+  body main .seccionPromoKits .primerKit .tituloKit {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  body main .seccionPromoKits .primerKit .imagenKit {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    margin-right: 1rem;
+  }
+  body main .seccionPromoKits .primerKit .imagenKit .superpuesta1 {
+    border-radius: 2rem;
+    height: 18rem;
+    overflow: hidden;
+  }
+  body main .seccionPromoKits .primerKit .descripcionKit {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  body main .seccionPromoKits .primerKit .botonKit {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body main .seccionPromoKits .segundoKit {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    height: 20rem;
+  }
+  body main .seccionPromoKits .segundoKit .tituloKit {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  body main .seccionPromoKits .segundoKit .imagenKit {
+    grid-column: 2/3;
+    grid-row: 1/4;
+    margin-left: 1rem;
+  }
+  body main .seccionPromoKits .segundoKit .imagenKit .superpuesta3 {
+    border-radius: 2rem;
+    height: 18rem;
+    overflow: hidden;
+  }
+  body main .seccionPromoKits .segundoKit .descripcionKit {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  body main .seccionPromoKits .segundoKit .botonKit {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body footer div .logoFooter {
+    height: 4rem;
+    border-radius: 0.4rem;
+  }
+  body footer div .logoLlamar {
+    display: inline;
+    height: 2rem;
+    margin-left: 5rem;
+  }
+  body footer div .logoCorreo {
+    height: 2rem;
+    margin-left: 1.5rem;
+  }
+  body footer div .telefono {
+    display: inline;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.1rem;
+    color: whitesmoke;
+    text-decoration: none;
+  }
+  body footer div .correo {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.1rem;
+    color: whitesmoke;
+    text-decoration: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body .mainIndex .slide {
+    height: 28rem;
+  }
+  body .mainIndex .slide .encuadreCelebracion15 {
+    position: relative;
+    bottom: 25rem;
+  }
+  body .mainIndex .promoProductos .promoProductosCards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  body .mainIndex .promoProductos .promoProductosCards .card {
+    width: 16rem;
+  }
+  body .mainIndex .promoProductos .promoProductosCards .card img {
+    height: 18rem;
+  }
+  body .mainIndex .seccionPromoKits .primerKit .imagenKit .superpuesta1 {
+    height: 12rem;
+    margin-top: 7rem;
+  }
+  body .mainIndex .seccionPromoKits .primerKit .imagenKit .superpuesta2 {
+    display: inline;
+    z-index: 1;
+    height: 10rem;
+    position: relative;
+    left: 17rem;
+    bottom: 5rem;
+    border-radius: 2rem;
+  }
+  body .mainIndex .seccionPromoKits .segundoKit .imagenKit .superpuesta3 {
+    position: relative;
+    right: -12rem;
+    height: 12rem;
+    margin-top: 7rem;
+    z-index: -1;
+  }
+  body .mainIndex .seccionPromoKits .segundoKit .imagenKit .superpuesta4 {
+    background-color: aquamarine;
+    display: inline;
+    z-index: 1;
+    height: 10rem;
+    position: relative;
+    left: 2rem;
+    bottom: 5rem;
+    border-radius: 2rem;
+  }
+  body footer div .logoFooter {
+    margin-left: 4rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+    border-radius: 0.5rem;
+  }
+  body footer div .logoLlamar {
+    margin-left: 17rem;
+  }
+  body footer div .logoCorreo {
+    margin-left: 10rem;
+  }
+  body footer div .telefono {
+    display: inline;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.1rem;
+    color: whitesmoke;
+    text-decoration: none;
+  }
+  body footer div .correo {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.1rem;
+    color: whitesmoke;
+    text-decoration: none;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

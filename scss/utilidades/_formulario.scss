@@ -1,0 +1,78 @@
+/* formulario para contactar con sombras */
+.formularioContacto {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 21.5rem;
+    height: 100%;
+    flex-direction: column;
+    background-color: #E51B23;
+    padding: 4px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px;
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+    margin-bottom: 40px;
+    .textboxnombre {
+        width: 90%;
+        background-color:whitesmoke;
+        padding: 4px;
+        border-radius: 4px;
+        border: 1px solid #373333;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 15px;
+        color: #373333;
+    }
+    /* el cuadro para el celular */
+    .textboxcelular {
+        margin-top: 15px;
+        width: 90%;
+        background-color:whitesmoke;
+        padding: 4px;
+        border-radius: 4px;
+        border: 1px solid #373333;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 15px;
+        color: #373333;
+    }
+    /* el cuadro para escribir las dudas */
+    .textboxdudas {
+        margin-top: 15px;
+        width: 90%;
+        background-color:whitesmoke;
+        padding: 4px;
+        border-radius: 4px;
+        border: 1px solid #373333;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 15px;
+        color: #373333;
+    }
+    .botondudas {
+        width: 90%;
+        background-color: #373333;
+        border: none;
+        padding: 12px;
+        color: white;
+        margin: 16px 0;
+        font-size: 17px;
+    }
+}
+
+
+
+/* el cuadro para el nombre */
+
+
+
+
