@@ -431,20 +431,21 @@ body .mainIndex .encuadreCelebracion15 {
   bottom: 7rem;
 }
 body .promoProductos {
-  /* le doy formato al h1 sacando las propiedades desde el mixin */
   /* le doy flex a las cards que saqué de bootstrap, con el flex las alineo al centro y le doy un margen con gap */
 }
-body .promoProductos h1 {
+body .promoProductos .todoFiesta {
+  /* le doy formato al h1 sacando las propiedades desde el mixin */
+}
+body .promoProductos .todoFiesta h1 {
+  margin-top: 0.5rem;
   text-align: center;
-  margin-top: 0.7rem;
-  margin-bottom: 0.7rem;
-  margin-left: 0.8rem;
-  margin-right: 0.8rem;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 1.2rem;
+  font-weight: 300;
   color: #373333;
+  font-size: 2.4rem;
+  font-family: "Citrus Gothic";
+}
+body .promoProductos .todoFiesta h1 span {
+  color: #8B3030;
 }
 body .promoProductos .promoProductosCards {
   display: flex;
@@ -514,13 +515,12 @@ body .seccionPromoKits .detalleKits {
   /* para celulares y tablet solo se muestra una imagen para cada tipo de evento */
 }
 body .seccionPromoKits .detalleKits .tituloKit {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 1.5rem;
   text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
   color: #373333;
-  text-transform: uppercase;
   margin-top: 1rem;
 }
 body .seccionPromoKits .detalleKits .imagenKit {
@@ -603,45 +603,41 @@ footer div .correo {
   body {
     /* aqui va el footer, ahora con mas espacio aparece el logo de llamar*/
   }
-  body main {
+  body .mainIndex {
     /* aumento la altura del slide y cambiamos posicion de la segunda foto*/
     /*modifico la fuente por una mas grande*/
     /* aquí agrego grids para crear dos columnas, así va la imagen en una y la descrpcion justo al lado*/
   }
-  body main .slide {
-    height: 23rem;
+  body .mainIndex .slide {
+    height: 17rem;
   }
-  body main .slide .encuadreCelebracion15 {
+  body .mainIndex .slide .encuadreCelebracion15 {
     position: relative;
     bottom: 15rem;
   }
-  body main .promoProductos {
+  body .mainIndex .promoProductos {
     /* le damos flex a las cards de bootstrap para que queden una al lado de la otra en dos filas*/
   }
-  body main .promoProductos h1 {
-    text-align: center;
-    margin-top: 0.7rem;
-    margin-bottom: 0.7rem;
-    margin-left: 0.8rem;
-    margin-right: 0.8rem;
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 2rem;
-    color: #373333;
+  body .mainIndex .promoProductos .todoFiesta {
+    /* le doy formato al h1 sacando las propiedades desde el mixin */
   }
-  body main .promoProductos .promoProductosCards {
+  body .mainIndex .promoProductos .todoFiesta h1 {
+    margin-top: 0.5rem;
+    font-weight: 400;
+    font-size: 4rem;
+  }
+  body .mainIndex .promoProductos .promoProductosCards {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
-  body main .promoProductos .promoProductosCards .card {
+  body .mainIndex .promoProductos .promoProductosCards .card {
     width: 21rem;
   }
-  body main .seccionPromoKits {
+  body .mainIndex .seccionPromoKits {
     /*repito lo mismo pero invierto las posiciones, descripcion a la primera columna e imagen a la segunda columna*/
   }
-  body main .seccionPromoKits .primerKit {
+  body .mainIndex .seccionPromoKits .primerKit {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -653,57 +649,57 @@ footer div .correo {
     /*la descrpipcion ocupa la segunda fila de la segunda columna*/
     /* el boton queda en la ultima fila de la segunda columna*/
   }
-  body main .seccionPromoKits .primerKit .tituloKit {
+  body .mainIndex .seccionPromoKits .primerKit .tituloKit {
     grid-column: 2/3;
     grid-row: 1/2;
   }
-  body main .seccionPromoKits .primerKit .imagenKit {
+  body .mainIndex .seccionPromoKits .primerKit .imagenKit {
     grid-column: 1/2;
     grid-row: 1/4;
     margin-right: 1rem;
   }
-  body main .seccionPromoKits .primerKit .imagenKit .superpuesta1 {
-    border-radius: 2rem;
+  body .mainIndex .seccionPromoKits .primerKit .imagenKit .superpuesta1 {
+    border-radius: 1.2rem;
     height: 18rem;
     overflow: hidden;
   }
-  body main .seccionPromoKits .primerKit .descripcionKit {
+  body .mainIndex .seccionPromoKits .primerKit .descripcionKit {
     grid-column: 2/3;
     grid-row: 2/3;
   }
-  body main .seccionPromoKits .primerKit .botonKit {
+  body .mainIndex .seccionPromoKits .primerKit .botonKit {
     grid-column: 2/3;
     grid-row: 3/4;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  body main .seccionPromoKits .segundoKit {
+  body .mainIndex .seccionPromoKits .segundoKit {
     margin-top: 3rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
     height: 20rem;
   }
-  body main .seccionPromoKits .segundoKit .tituloKit {
+  body .mainIndex .seccionPromoKits .segundoKit .tituloKit {
     grid-column: 1/2;
     grid-row: 1/2;
   }
-  body main .seccionPromoKits .segundoKit .imagenKit {
+  body .mainIndex .seccionPromoKits .segundoKit .imagenKit {
     grid-column: 2/3;
     grid-row: 1/4;
     margin-left: 1rem;
   }
-  body main .seccionPromoKits .segundoKit .imagenKit .superpuesta3 {
-    border-radius: 2rem;
+  body .mainIndex .seccionPromoKits .segundoKit .imagenKit .superpuesta3 {
+    border-radius: 1.2rem;
     height: 18rem;
     overflow: hidden;
   }
-  body main .seccionPromoKits .segundoKit .descripcionKit {
+  body .mainIndex .seccionPromoKits .segundoKit .descripcionKit {
     grid-column: 1/2;
     grid-row: 2/3;
   }
-  body main .seccionPromoKits .segundoKit .botonKit {
+  body .mainIndex .seccionPromoKits .segundoKit .botonKit {
     grid-column: 1/2;
     grid-row: 3/4;
     display: flex;
@@ -749,6 +745,7 @@ footer div .correo {
   body .mainIndex {
     /* aumento otro poco la altura del slide y cambio posicion de segunda foto*/
     /* acá le doy flex a las cards de bootstrap y modifico el ancho para que quepan las 4 cards en una misma fila*/
+    /*modifico la fuente por una mas grande*/
     /* el dolor de cabeza, aparecen dos imagenes extras que se superponen a las anteriores en una de las esquinas*/
   }
   body .mainIndex .slide {
@@ -757,6 +754,14 @@ footer div .correo {
   body .mainIndex .slide .encuadreCelebracion15 {
     position: relative;
     bottom: 25rem;
+  }
+  body .mainIndex .promoProductos .todoFiesta {
+    /* le doy formato al h1 sacando las propiedades desde el mixin */
+  }
+  body .mainIndex .promoProductos .todoFiesta h1 {
+    margin-top: 0.5rem;
+    font-weight: 400;
+    font-size: 4.5rem;
   }
   body .mainIndex .promoProductos .promoProductosCards {
     flex-direction: row;

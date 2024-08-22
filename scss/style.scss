@@ -49,10 +49,21 @@ body {
             }
         }
         .promoProductos {
-            /* le doy formato al h1 sacando las propiedades desde el mixin */
-            h1 {
-                @include textoTitulo;
+            .todoFiesta {
+                /* le doy formato al h1 sacando las propiedades desde el mixin */
+                h1 {
+                    margin-top: 0.5rem;
+                    text-align: center;
+                    font-weight: 300;
+                    color: $colorSecundario;
+                    font-size: 2.4rem;
+                    font-family:'Citrus Gothic';
+                    span {
+                        color: #8B3030;
+                    }
+                }
             }
+            
             /* le doy flex a las cards que saqué de bootstrap, con el flex las alineo al centro y le doy un margen con gap */
             .promoProductosCards {
                 display: flex;
@@ -109,7 +120,7 @@ body {
                 @include flex;
                 flex-direction: column;
                 .tituloKit {
-                    @include textSecundario;
+                    @include textoSecundario;
                     margin-top: 1rem;
                 }
                 /* para celulares y tablet solo se muestra una imagen para cada tipo de evento */
@@ -190,10 +201,10 @@ body {
 @media screen and (min-width: 768px) {
 
     body {
-        main {
+        .mainIndex {
             /* aumento la altura del slide y cambiamos posicion de la segunda foto*/
             .slide {
-                height: 23rem;
+                height: 17rem;
                 .encuadreCelebracion15 {
                     position: relative;
                     bottom: 15rem;
@@ -201,93 +212,98 @@ body {
                 }
             /*modifico la fuente por una mas grande*/
             .promoProductos {
-                h1 {
-                    @include textoTituloTablet;
-                }
-            /* le damos flex a las cards de bootstrap para que queden una al lado de la otra en dos filas*/
-            .promoProductosCards {
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: space-evenly;
-                .card {
-                    width: 21rem;  
-                }
+                .todoFiesta {
+                    /* le doy formato al h1 sacando las propiedades desde el mixin */
+                    h1 {
+                        margin-top: 0.5rem;
+                        font-weight: 400;
+                        font-size: 4rem;
                 }
             }
-
-            /* aquí agrego grids para crear dos columnas, así va la imagen en una y la descrpcion justo al lado*/
-            .seccionPromoKits {
-                .primerKit {
-                    display: grid;
-                    grid-template-columns: repeat(2,1fr);
-                    grid-template-rows: repeat(4,1fr);
-                    height: 20rem;
-                    margin-top: 2rem;
-                    margin-bottom: -2rem;
-                    /* el titulo y la descripcion pasan a la segunda columna*/
-                    .tituloKit {
-                        grid-column: 2/3;
-                        grid-row:1/2;
+                /* le damos flex a las cards de bootstrap para que queden una al lado de la otra en dos filas*/
+                .promoProductosCards {
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+                    .card {
+                        width: 21rem;  
                     }
-                    /*la imagen pasa a la primera columna*/
-                    .imagenKit {
-                        grid-column: 1/2;
-                        grid-row:1/4;
-                        margin-right: 1rem;
-                        .superpuesta1 {
-                            border-radius: 2rem;
-                            height: 18rem;
-                            overflow: hidden;
-                        }
-                    }
-                    /*la descrpipcion ocupa la segunda fila de la segunda columna*/
-                    .descripcionKit {
-                        grid-column: 2/3;
-                        grid-row: 2/3;
-                    }
-                    /* el boton queda en la ultima fila de la segunda columna*/
-                    .botonKit {
-                        grid-column: 2/3;
-                        grid-row: 3/4;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
                     }
                 }
-                /*repito lo mismo pero invierto las posiciones, descripcion a la primera columna e imagen a la segunda columna*/
-                .segundoKit {
-                    margin-top: 3rem;
-                    display: grid;
-                    grid-template-columns: repeat(2,1fr);
-                    grid-template-rows: repeat(4,1fr);
-                    height: 20rem;
-                    .tituloKit {
-                        grid-column: 1/2;
-                        grid-row:1/2;
-                    }
-                    .imagenKit {
-                        grid-column: 2/3;
-                        grid-row:1/4;
-                        margin-left: 1rem;
-                        .superpuesta3 {
-                            border-radius: 2rem;
-                            height: 18rem;
-                            overflow: hidden;
+    
+                /* aquí agrego grids para crear dos columnas, así va la imagen en una y la descrpcion justo al lado*/
+                .seccionPromoKits {
+                    .primerKit {
+                        display: grid;
+                        grid-template-columns: repeat(2,1fr);
+                        grid-template-rows: repeat(4,1fr);
+                        height: 20rem;
+                        margin-top: 2rem;
+                        margin-bottom: -2rem;
+                        /* el titulo y la descripcion pasan a la segunda columna*/
+                        .tituloKit {
+                            grid-column: 2/3;
+                            grid-row:1/2;
+                        }
+                        /*la imagen pasa a la primera columna*/
+                        .imagenKit {
+                            grid-column: 1/2;
+                            grid-row:1/4;
+                            margin-right: 1rem;
+                            .superpuesta1 {
+                                border-radius: 1.2rem;
+                                height: 18rem;
+                                overflow: hidden;
+                            }
+                        }
+                        /*la descrpipcion ocupa la segunda fila de la segunda columna*/
+                        .descripcionKit {
+                            grid-column: 2/3;
+                            grid-row: 2/3;
+                        }
+                        /* el boton queda en la ultima fila de la segunda columna*/
+                        .botonKit {
+                            grid-column: 2/3;
+                            grid-row: 3/4;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
                         }
                     }
-                    .descripcionKit {
-                        grid-column: 1/2;
-                        grid-row: 2/3;
+                    /*repito lo mismo pero invierto las posiciones, descripcion a la primera columna e imagen a la segunda columna*/
+                    .segundoKit {
+                        margin-top: 3rem;
+                        display: grid;
+                        grid-template-columns: repeat(2,1fr);
+                        grid-template-rows: repeat(4,1fr);
+                        height: 20rem;
+                        .tituloKit {
+                            grid-column: 1/2;
+                            grid-row:1/2;
+                        }
+                        .imagenKit {
+                            grid-column: 2/3;
+                            grid-row:1/4;
+                            margin-left: 1rem;
+                            .superpuesta3 {
+                                border-radius: 1.2rem;
+                                height: 18rem;
+                                overflow: hidden;
+                            }
+                        }
+                        .descripcionKit {
+                            grid-column: 1/2;
+                            grid-row: 2/3;
+                        }
+                        .botonKit {
+                            grid-column: 1/2;
+                            grid-row: 3/4;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
                     }
-                    .botonKit {
-                        grid-column: 1/2;
-                        grid-row: 3/4;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                    }
-                }
-            }
+                }   
         }
 
         /* aqui va el footer, ahora con mas espacio aparece el logo de llamar*/
@@ -335,7 +351,16 @@ body {
                 }
                 }
             /* acá le doy flex a las cards de bootstrap y modifico el ancho para que quepan las 4 cards en una misma fila*/
+            /*modifico la fuente por una mas grande*/
             .promoProductos {
+                .todoFiesta {
+                    /* le doy formato al h1 sacando las propiedades desde el mixin */
+                    h1 {
+                        margin-top: 0.5rem;
+                        font-weight: 400;
+                        font-size: 4.5rem;
+                    }
+                }
                 .promoProductosCards {
                     flex-direction: row;
                     flex-wrap: wrap;
