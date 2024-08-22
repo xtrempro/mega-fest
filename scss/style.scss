@@ -72,7 +72,12 @@ body {
                             display: flex;
                             justify-content: space-around;
                         }
-                    
+                        .card-body{
+                            .btn {
+                                background-color: $colorSecundario;
+                                border-color: $colorSecundario;
+                            }
+                        }
                 }
             }
         }
@@ -132,48 +137,15 @@ body {
                     margin-top: 0.7rem;
                     @include textoSecundario;
                 }
-            }
-        }
-        /* aquí le doy formato a una tabla de despachos*/
-        .tablaDespacho {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
-                .tablaValores {
-                    padding: 4px;
-                    border: 3px solid $colorSecundario;
-                    border-collapse: collapse;
-                    width: 300px;
-                    tr {
-                    padding: 5px;
-                    border: 3px solid $colorSecundario;
-                    @include textoTitulosTabla;
-                        /* títulos de la tabla de costos de envío */
-                        th {
-                            padding: 5px;
-                            border: 3px solid $colorSecundario;
-                            @include textoTitulosTabla;
-                        }
-                        td {
-                            padding: 5px;
-                            border: 3px solid $colorSecundario;
-                            @include textoTabla;
-                        }
+                .botonKit {
+                    .btn {
+                        background-color: $colorSecundario;
+                        border-color: $colorSecundario;
                     }
                 }
-            /* busco desde la clase el parrafo para dar formato al texto para san antonio la entrega y retiro es gratis*/
-            p {
-                margin-top: 20px;
-                @include textoSecundario;
-                /* busco el span del parrafo para poner bold */
-                span {
-                    font-weight: 900;
-                    color: $colorPrincipal;
-                }
             }
         }
+        
         /* ícono de whatsapp fijado en la esquina inferior derecha */
         .whatsapp {
             width: 3rem;
@@ -382,6 +354,7 @@ body {
                     .imagenKit {
                         .superpuesta1 {
                             height: 12rem;
+                            width: auto;
                             margin-top: 7rem;
                         }
                         /*le doy posicion relativa para superponerla
@@ -392,8 +365,9 @@ body {
                             height: 10rem;
                             position: relative;
                             left: 17rem;
-                            bottom: 05rem;
+                            bottom: 5rem;
                             border-radius: 2rem;
+                            width: auto;
                         }
                     }
                 }
@@ -404,6 +378,7 @@ body {
                             position: relative;
                             right: -12rem;
                             height: 12rem;
+                            max-width: auto;
                             margin-top: 7rem;
                             z-index: -1;
                         }
@@ -411,6 +386,7 @@ body {
                             display: inline;
                             z-index: 1;
                             height: 10rem;
+                            max-width: auto;
                             position: relative;
                             left: 2rem;
                             bottom: 5rem;

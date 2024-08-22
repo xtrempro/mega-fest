@@ -1,6 +1,8 @@
 @charset "UTF-8";
 /* enlazo los archivos de utilidades */
-/* variables para los 3 colores del proyecto */
+/* casi todos estos mixin formatean textos */
+/* describo la propiedad flex para tener menos lineas de codigo en el scss */
+/* variables para los 3 colores del proyecto  */
 /* formulario para contactar con sombras */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 .formularioContacto {
@@ -18,10 +20,11 @@
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: 15px;
+  font-size: 1.4rem;
   color: white;
   box-shadow: 7px 13px 37px #000;
   margin-bottom: 40px;
+  /* el cuadro para el nombre */
   /* el cuadro para el celular */
   /* el cuadro para escribir las dudas */
 }
@@ -73,7 +76,6 @@
   font-size: 17px;
 }
 
-/* el cuadro para el nombre */
 /* Estilos de productos */
 .mainProductos {
   display: flex;
@@ -81,11 +83,12 @@
   align-items: center;
   /* Acá va el título de cada categoría, ejemplo "Nuestra Iluminación" */
   /* Esta parte modifica el subtítulo de cada categoría */
-  /* aquí va el recuadro de cada producto con flex para centrar y una altura automatica para que crezca según el contenido de cada producto*/
+  /* aquí le doy formato a una tabla de despachos*/
 }
 .mainProductos .tituloCategoria {
   text-align: center;
   padding: 5px;
+  margin-top: 0.7rem;
   margin-left: 0.7rem;
   margin-right: 0.7rem;
   font-family: "Roboto", sans-serif;
@@ -93,6 +96,7 @@
   font-style: normal;
   font-size: 2rem;
   color: #373333;
+  text-transform: uppercase;
 }
 .mainProductos .descripcionCategoria {
   text-align: center;
@@ -108,16 +112,19 @@
 .mainProductos .descripcionCategoria span {
   font-weight: 800;
 }
-.mainProductos .recuadroProducto {
-  display: flex;
-  flex-direction: column;
+.mainProductos .displayArea {
+  /* aquí va el recuadro de cada producto con flex para centrar y una altura automatica para que crezca según el contenido de cada producto*/
+}
+.mainProductos .displayArea .recuadroProducto {
+  padding: 0.4rem;
   margin: 1rem;
   height: auto;
   width: 21.5rem;
   border: 2px solid #949494;
   /* hago una class grid en un nuevo div que será útil en los MQ de tablet y desktop */
 }
-.mainProductos .recuadroProducto .tituloProducto {
+.mainProductos .displayArea .recuadroProducto .tituloProducto {
+  text-transform: uppercase;
   height: auto;
   margin: 0.7rem;
   background-color: #E51B23;
@@ -128,25 +135,16 @@
   color: #ffffff;
   text-align: center;
 }
-.mainProductos .recuadroProducto .grid {
+.mainProductos .displayArea .recuadroProducto .grid {
   /* la aplico flex a las imagenes para que se centren en el recuadro cuando sobrepasen el div */
 }
-.mainProductos .recuadroProducto .grid .imagenProducto {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.mainProductos .displayArea .recuadroProducto .grid .imagenProducto {
   margin: 0.7rem;
-  height: 15rem;
-  background-color: #bd9899;
-  overflow: hidden;
-  object-fit: cover;
+  margin-bottom: 1.5rem;
+  background-color: #373333;
   box-shadow: 3px 7px 17px #000;
-  /* le doy la misma altura del div a la imagen */
 }
-.mainProductos .recuadroProducto .grid .imagenProducto img {
-  height: 15rem;
-}
-.mainProductos .recuadroProducto .grid .descripcionProducto {
+.mainProductos .displayArea .recuadroProducto .grid .descripcionProducto {
   height: auto;
   margin: 0.7rem;
   margin-bottom: 0;
@@ -158,13 +156,13 @@
   list-style: none;
   /* quitamos los puntitos del listado */
 }
-.mainProductos .recuadroProducto .grid .descripcionProducto ul {
+.mainProductos .displayArea .recuadroProducto .grid .descripcionProducto ul {
   list-style: none;
 }
-.mainProductos .recuadroProducto .grid .precioProducto {
+.mainProductos .displayArea .recuadroProducto .grid .precioProducto {
   height: 90px;
   margin: 0.7rem;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -172,69 +170,216 @@
   color: #373333;
   display: flex;
   flex-direction: column;
+  /* muevo el precio y el botón al final del div */
   align-items: flex-end;
+  justify-content: flex-end;
 }
-.mainProductos .recuadroProducto .grid .precioProducto span {
+.mainProductos .displayArea .recuadroProducto .grid .precioProducto span {
   font-weight: 900;
 }
-.mainProductos .recuadroProducto .grid .precioProducto .botonProducto .boton1 {
+.mainProductos .displayArea .recuadroProducto .grid .precioProducto .botonProducto .boton1 {
   background-color: #373333;
 }
-
-.boxPreguntas {
+.mainProductos .boxPreguntas {
   margin: 0.7rem;
   /* estilo de las preguntas que van en negrita */
   /* respuesta que van sin negrita */
 }
-.boxPreguntas .preguntas {
+.mainProductos .boxPreguntas .preguntas {
   font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-style: normal;
   font-size: 1rem;
   color: #373333;
 }
-.boxPreguntas .respuestas {
+.mainProductos .boxPreguntas .respuestas {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 0.8rem;
   color: #373333;
-  margin-bottom: 5px;
+  margin-bottom: 1rem;
+  margin-top: -1rem;
+}
+.mainProductos .tablaDespacho {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  /* busco desde la clase el parrafo para dar formato al texto para san antonio la entrega y retiro es gratis*/
+}
+.mainProductos .tablaDespacho .tablaValores {
+  padding: 4px;
+  border: 3px solid #373333;
+  border-collapse: collapse;
+  width: 300px;
+  /* selecciono los precios y los alineo a la derecha */
+}
+.mainProductos .tablaDespacho .tablaValores tr {
+  padding: 5px;
+  border: 3px solid #373333;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1rem;
+  color: #373333;
+  text-align: left;
+  /* títulos de la tabla de costos de envío */
+}
+.mainProductos .tablaDespacho .tablaValores tr th {
+  padding: 5px;
+  border: 3px solid #373333;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1rem;
+  color: #373333;
+  text-align: left;
+}
+.mainProductos .tablaDespacho .tablaValores tr td {
+  padding: 5px;
+  border: 3px solid #373333;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  color: #373333;
+}
+.mainProductos .tablaDespacho .tablaValores .columnaCosto {
+  text-align: right;
+}
+.mainProductos .tablaDespacho p {
+  margin-top: 20px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  color: #373333;
+  /* busco el span del parrafo para poner bold */
+}
+.mainProductos .tablaDespacho p span {
+  font-weight: 900;
+  color: #E51B23;
 }
 
 /* acá el MQ para tablet*/
-@media screen and (min-width: 768px) {
-  .mainProductos .recuadroProducto {
-    width: 40rem;
+/* le bajo un pixel al MQ para mejorar la visualización en dispositivos que están en el límite*/
+@media screen and (min-width: 767px) {
+  .mainProductos {
+    /* Esta parte modifica el la descripción de cada categoría */
+  }
+  .mainProductos .descripcionCategoria {
+    font-size: 1.2rem;
+    max-width: 44rem;
+  }
+  .mainProductos .displayArea .recuadroProducto {
+    width: 44rem;
+    padding: 1rem;
     /* le aplico un grid para crear dos columnas, la descrpcion queda en la primera y la imagen con el precio en la segudna columna */
   }
-  .mainProductos .recuadroProducto .grid {
-    display: grid;
-    grid-template-columns: 55% 45%;
+  .mainProductos .displayArea .recuadroProducto .tituloProducto {
+    font-size: 1.7rem;
   }
-  .mainProductos .recuadroProducto .grid .imagenProducto {
+  .mainProductos .displayArea .recuadroProducto .grid {
+    display: grid;
+    grid-template-columns: 45% 55%;
+  }
+  .mainProductos .displayArea .recuadroProducto .grid .imagenProducto {
     grid-column: 2/3;
     border-radius: 0.5rem;
+    overflow: hidden;
+    height: 15rem;
   }
-  .mainProductos .recuadroProducto .grid .descripcionProducto {
+  .mainProductos .displayArea .recuadroProducto .grid .imagenProducto .carousel {
+    height: 15rem;
+  }
+  .mainProductos .displayArea .recuadroProducto .grid .imagenProducto .carousel img {
+    max-width: 100%;
+    height: 15rem;
+  }
+  .mainProductos .displayArea .recuadroProducto .grid .descripcionProducto {
     grid-column: 1/2;
-    grid-row: 1/2;
+    grid-row: 1/3;
+    font-size: 1.1rem;
   }
-  .mainProductos .recuadroProducto .grid .precioProducto {
+  .mainProductos .displayArea .recuadroProducto .grid .precioProducto {
     grid-column: 2/3;
+    grid-row: 2/3;
+    font-size: 1.3rem;
+    margin-bottom: 0rem;
+  }
+  .mainProductos .displayArea .recuadroProducto .grid .precioProducto .botonProducto .boton1 {
+    font-size: 1.2rem;
+  }
+  .mainProductos .boxPreguntas {
+    margin: 0.7rem;
+    /* estilo de las preguntas que van en negrita */
+    /* respuesta que van sin negrita */
+  }
+  .mainProductos .boxPreguntas .preguntas {
+    font-size: 1.4rem;
+  }
+  .mainProductos .boxPreguntas .respuestas {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    margin-top: -1rem;
   }
 }
 /* MQ para desktop */
-@media screen and (min-width: 1024px) {
+/* le aumento a 1400 pixeles para entonces crear dos columnas y mejorar la visualización*/
+@media screen and (min-width: 1400px) {
   .mainProductos {
-    /* le doy mas ancho al recuadro de cada producto */
+    /* Esta parte modifica el la descripción de cada categoría */
+    /* aquí le doy formato a una tabla de despachos*/
   }
-  .mainProductos .recuadroProducto {
-    width: 50rem;
+  .mainProductos .descripcionCategoria {
+    font-size: 1.2rem;
+    max-width: 60rem;
+  }
+  .mainProductos .displayArea {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* le doy menos ancho al recuadro de cada producto para que quepan en dos columnas */
+  }
+  .mainProductos .displayArea .recuadroProducto {
+    max-width: 37rem;
     padding: 1rem;
   }
-  .mainProductos .recuadroProducto .grid .imagenProducto {
+  .mainProductos .displayArea .recuadroProducto .grid .imagenProducto .carousel {
     border-radius: 0.7rem;
+  }
+  .mainProductos .displayArea .recuadroProducto .grid .imagenProducto .carousel img {
+    object-fit: cover;
+  }
+  .mainProductos .displayArea .recuadroProducto .grid .descripcionProducto {
+    font-size: 1.1rem;
+  }
+  .mainProductos .tablaDespacho {
+    /* busco desde la clase el parrafo para dar formato al texto para san antonio la entrega y retiro es gratis*/
+  }
+  .mainProductos .tablaDespacho .tablaValores {
+    width: 25rem;
+  }
+  .mainProductos .tablaDespacho .tablaValores tr {
+    font-size: 1.5rem;
+    /* títulos de la tabla de costos de envío */
+  }
+  .mainProductos .tablaDespacho .tablaValores tr th {
+    font-size: 1.3rem;
+  }
+  .mainProductos .tablaDespacho .tablaValores tr td {
+    font-size: 1.3rem;
+  }
+  .mainProductos .tablaDespacho p {
+    font-size: 1.7rem;
+    /* busco el span del parrafo para poner bold */
+  }
+  .mainProductos .tablaDespacho p span {
+    font-weight: 900;
+    color: #E51B23;
   }
 }
 /* importo fuente desde google */
@@ -255,7 +400,6 @@ body {
   /* dejo el menú siempre pegado al top del navegador */
   /* recuadro que va dividiendo algunas categorias */
   /* en la parte central del index va una imagen mas una descripcion de un evento en el cual son utiles nuestros productos */
-  /* aquí le doy formato a una tabla de despachos*/
   /* ícono de whatsapp fijado en la esquina inferior derecha */
 }
 body header {
@@ -327,6 +471,10 @@ body .promoProductos .promoProductosCards .card a {
   display: flex;
   justify-content: space-around;
 }
+body .promoProductos .promoProductosCards .card .card-body .btn {
+  background-color: #373333;
+  border-color: #373333;
+}
 body .banner {
   width: 100%;
   margin-top: 1rem;
@@ -342,9 +490,10 @@ body .banner .primerTextoBanner {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: whitesmoke;
   text-align: center;
+  text-transform: uppercase;
 }
 body .banner .segundoTextoBanner {
   text-align: center;
@@ -365,15 +514,11 @@ body .seccionPromoKits .detalleKits {
   /* para celulares y tablet solo se muestra una imagen para cada tipo de evento */
 }
 body .seccionPromoKits .detalleKits .tituloKit {
-  text-align: center;
-  margin-top: 0.7rem;
-  margin-bottom: 0.7rem;
-  margin-left: 0.8rem;
-  margin-right: 0.8rem;
   font-family: "Roboto", sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   font-style: normal;
-  font-size: 0.1rem;
+  font-size: 1.5rem;
+  text-align: center;
   color: #373333;
   text-transform: uppercase;
   margin-top: 1rem;
@@ -407,63 +552,9 @@ body .seccionPromoKits .detalleKits .descripcionKit {
   font-size: 1rem;
   color: #373333;
 }
-body .tablaDespacho {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
-  /* busco desde la clase el parrafo para dar formato al texto para san antonio la entrega y retiro es gratis*/
-}
-body .tablaDespacho .tablaValores {
-  padding: 4px;
-  border: 3px solid #373333;
-  border-collapse: collapse;
-  width: 300px;
-}
-body .tablaDespacho .tablaValores tr {
-  padding: 5px;
-  border: 3px solid #373333;
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-  font-size: 1rem;
-  color: #373333;
-  text-align: left;
-  /* títulos de la tabla de costos de envío */
-}
-body .tablaDespacho .tablaValores tr th {
-  padding: 5px;
-  border: 3px solid #373333;
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-  font-size: 1rem;
-  color: #373333;
-  text-align: left;
-}
-body .tablaDespacho .tablaValores tr td {
-  padding: 5px;
-  border: 3px solid #373333;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1rem;
-  color: #373333;
-}
-body .tablaDespacho p {
-  margin-top: 20px;
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1rem;
-  color: #373333;
-  /* busco el span del parrafo para poner bold */
-}
-body .tablaDespacho p span {
-  font-weight: 900;
-  color: #E51B23;
+body .seccionPromoKits .detalleKits .botonKit .btn {
+  background-color: #373333;
+  border-color: #373333;
 }
 body .whatsapp {
   width: 3rem;
@@ -684,6 +775,7 @@ footer div .correo {
   }
   body .mainIndex .seccionPromoKits .primerKit .imagenKit .superpuesta1 {
     height: 12rem;
+    width: auto;
     margin-top: 7rem;
   }
   body .mainIndex .seccionPromoKits .primerKit .imagenKit .superpuesta2 {
@@ -694,6 +786,7 @@ footer div .correo {
     left: 17rem;
     bottom: 5rem;
     border-radius: 2rem;
+    width: auto;
   }
   body .mainIndex .seccionPromoKits .segundoKit .imagenKit {
     /* z index de menos uno para que quede abajo de la otra imagen*/
@@ -702,6 +795,7 @@ footer div .correo {
     position: relative;
     right: -12rem;
     height: 12rem;
+    max-width: auto;
     margin-top: 7rem;
     z-index: -1;
   }
@@ -709,6 +803,7 @@ footer div .correo {
     display: inline;
     z-index: 1;
     height: 10rem;
+    max-width: auto;
     position: relative;
     left: 2rem;
     bottom: 5rem;

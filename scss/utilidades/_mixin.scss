@@ -1,3 +1,5 @@
+/* casi todos estos mixin formatean textos */
+
 @mixin textoTitulo {
     text-align: center;
     margin-top: 0.7rem;
@@ -9,20 +11,6 @@
     font-style: normal;
     font-size: 1.2rem;
     color: #373333;
-}
-
-@mixin textSecundario {
-    text-align: center;
-    margin-top: 0.7rem;
-    margin-bottom: 0.7rem;
-    margin-left: 0.8rem;
-    margin-right: 0.8rem;
-    font-family: "Roboto", sans-serif;
-    font-weight: 800;
-    font-style: normal;
-    font-size: 0.1rem;
-    color: #373333;
-    text-transform: uppercase;
 }
 
 @mixin textoTituloTablet {
@@ -47,6 +35,7 @@
     color: #373333;
 }
 
+/* describo la propiedad flex para tener menos lineas de codigo en el scss */
 @mixin flex {
     display: flex;
     justify-content: center;
@@ -77,6 +66,38 @@
     color: whitesmoke;
     text-align: center;
 }
+
+@mixin textoBanner {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@mixin textSecundario {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5rem;
+    text-align: center;
+    color: $colorSecundario;
+    text-transform: uppercase;
+}
+
+@mixin tituloKit {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: $colorSecundario;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
 
 @mixin textoTitulosTabla {
     font-family: "Roboto", sans-serif;
